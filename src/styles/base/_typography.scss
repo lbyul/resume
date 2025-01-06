@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+html {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    color: $color-black;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    font-weight: $font-regular;
+}
+
+body {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+p {
+  font-weight: $font-light;
+  letter-spacing: -0.5px;
+}
