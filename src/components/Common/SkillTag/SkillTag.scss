@@ -1,0 +1,13 @@
+@use '../../../styles/base/variables' as *;
+
+
+.skill-tag {
+    width: 100%;
+    padding: 3px 8px;
+    font-size: 1.2rem;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 5px;
+    letter-spacing: 0;
+    font-weight: $font-semibold;
+}

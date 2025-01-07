@@ -1,20 +1,37 @@
-// font functions
-@function rem($px) {
-    @return calc($px / 16) * 1rem;
+@font-face {
+	font-family: 'GmarketSans';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff')
+		format('woff');
+	font-weight: bold;
+	font-style: normal;
 }
 
-// font size
-$font-size-xs: rem(12);
-$font-size-sm: rem(14);
-$font-size-base: rem(16);
-$font-size-lg: rem(18);
+@font-face {
+	font-family: 'GmarketSans';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// font functions
+@function rem($px) {
+    @return $px * 0.1rem;
+}
 
 // font family
-$font-primary: 'Noto Sans KR', sans-serif;
+$font-primary: 'Noto Sans', sans-serif;
+$font-title: 'GmarketSans', sans-serif;
 
 // colors
 $color-black: #222222;
 $color-white: #ffffff;
+$color-gray: #ACACAC;
+$color-lavender: #C2C2DB;
+$color-yellow : #FFCF86;
+$line-gray: #ACACAC;
+$line-graylight: #E3E3E3;
+
 
 // font weights
 $font-light: 300;

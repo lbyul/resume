@@ -1,4 +1,7 @@
 import './Profile.scss';
+import SectionTitle from '../Common/SectionTitle/SectionTitle';
+import Line from '../Common/Line/Line';
+import SkillTag from '../Common/SkillTag/SkillTag';
 
 interface ProfileData {
     email: string;
@@ -24,17 +27,15 @@ const ContactItem = ({ label, href, value, type = 'default' }: {
     type?: 'email' | 'tel' | 'default';
 }) => (
     <div className='profile__contact-item'>
-        <dt className='profile__contact-label'>{label}</dt>
-        <dd className='profile__contact-value'>
-            <a
-                className='profile__contact-link'
-                href={type === 'email' ? `mailto:${href}` : type === 'tel' ? `tel:${href}` : href}
-                target={type === 'default' ? '_blank' : undefined}
-                rel={type === 'default' ? 'noopener noreferrer' : undefined}
-            >
-                {value}
-            </a>
-        </dd>
+        <SectionTitle title={label} size="small"/>
+        <a
+            className='profile__contact-link'
+            href={type === 'email' ? `mailto:${href}` : type === 'tel' ? `tel:${href}` : href}
+            target={type === 'default' ? '_blank' : undefined}
+            rel={type === 'default' ? 'noopener noreferrer' : undefined}
+        >
+            {value}
+        </a>
     </div>
 )
 
@@ -72,11 +73,13 @@ const Profile = () => {
                 </div>
             </section>
             <section className='profile__intro'>
-                <h2 className='profile__intro-title'>Introduce</h2>
+                <SectionTitle title='Introduce'/>
+                <Line lineSize='thick' />
                 {profileData.introduction.split('\n').map((text, index) => (
                     <p key={index} className='profile__intro-text'>{text.trim()}</p>
                 ))}
             </section>
+            <SkillTag skillName='Html'/>
         </article>
     );
 }

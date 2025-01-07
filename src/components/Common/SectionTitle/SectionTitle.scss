@@ -1,0 +1,25 @@
+@use '../../../styles/base/variables' as *;
+
+.section-title {
+    font-family: $font-title;
+    color: $color-lavender;
+    position: relative;
+    display: inline-block;
+
+    &.large {
+        font-size: 3rem;
+    }
+
+    &.small {
+        font-size: 2rem;
+    }
+
+    &::before {
+        content: '.⋆.･';
+        position: absolute;
+        color: $color-yellow;
+        bottom: 0;
+        right: -50px;
+        letter-spacing: 1px;
+    }
+}

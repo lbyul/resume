@@ -1,0 +1,18 @@
+@use '../../../styles/base/variables' as *;
+
+
+.line {
+    width: 100%;
+
+    &.thin {
+        height: 1px;
+        background-color: $line-graylight;
+        margin: 26px 0;
+    }
+
+    &.thick {
+        height: 2px;
+        background-color: $line-gray;
+        margin: 12px 0 22px 0;
+    }
+}
