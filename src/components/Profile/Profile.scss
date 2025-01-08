@@ -1,0 +1,90 @@
+@use '../../styles/base/variables' as *;
+
+.profile {
+    width: 100%;
+
+    &__info {
+        margin-bottom: 60px;
+    }
+
+    &__category {
+        letter-spacing: 0;
+        color: $color-gray;
+        display: inline-block;
+        position: relative;
+        font-weight: $font-medium;
+        margin-bottom: 6px;
+
+        &::before {
+            content: '.⋆.·';
+            position: absolute;
+            right: -26px;
+            bottom: 0.5px;
+            letter-spacing: 1px;
+            font-family: $font-title;
+
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: $font-bold;
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    &__img {
+        width: 23%;
+        height: 23%;
+        margin-right: 98px;
+    }
+
+    &__birth {
+        color: $color-gray;
+        font-weight: $font-medium;
+    }
+
+}
+
+.contact {
+    margin: 20px 0;
+
+    &__item {
+        display: flex;
+        gap: 5px;
+        // line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    &__label {
+        font-weight: $font-bold;
+    }
+
+    &__link {
+        opacity: 0.7;
+        text-decoration: underline 0.5px $line-gray;
+        text-underline-offset: 3px;
+        transition: all 0.2s ease-in-out;
+
+
+        &:hover {
+            opacity: 1;
+            text-decoration-color: $color-black;
+        }
+    }
+}
+
+.intro {
+    &__text {
+        & + & {
+            margin-bottom: 1.8rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

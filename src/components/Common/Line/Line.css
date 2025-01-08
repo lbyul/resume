@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.line {
+  width: 100%;
+}
+.line.thin {
+  height: 1px;
+  background-color: #E3E3E3;
+  margin: 26px 0;
+}
+.line.thick {
+  height: 2px;
+  background-color: #ACACAC;
+  margin: 12px 0 22px 0;
+}/*# sourceMappingURL=Line.css.map */

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.profile {
+  width: 100%;
+}
+.profile__info {
+  margin-bottom: 60px;
+}
+.profile__category {
+  letter-spacing: 0;
+  color: #989898;
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.profile__category::before {
+  content: ".⋆.·";
+  position: absolute;
+  right: -26px;
+  bottom: 0.5px;
+  letter-spacing: 1px;
+  font-family: "GmarketSans", sans-serif;
+}
+.profile__title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.profile__content {
+  display: flex;
+  margin-top: 30px;
+}
+.profile__img {
+  width: 23%;
+  height: 23%;
+  margin-right: 98px;
+}
+.profile__birth {
+  color: #989898;
+  font-weight: 500;
+}
+
+.contact {
+  margin: 20px 0;
+}
+.contact__item {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+.contact__label {
+  font-weight: 700;
+}
+.contact__link {
+  opacity: 0.7;
+  -webkit-text-decoration: underline 0.5px #ACACAC;
+          text-decoration: underline 0.5px #ACACAC;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.contact__link:hover {
+  opacity: 1;
+  -webkit-text-decoration-color: #222222;
+          text-decoration-color: #222222;
+}
+
+.intro__text + .intro__text {
+  margin-bottom: 1.8rem;
+}
+.intro__text:last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=Profile.css.map */

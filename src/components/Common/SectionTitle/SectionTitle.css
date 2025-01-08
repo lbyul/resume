@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.section-title {
+  color: #C2C2DB;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+.section-title::before {
+  content: ".⋆.･";
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  font-family: "GmarketSans", sans-serif;
+  color: #FFCF86;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.section-title.large {
+  font-size: 3rem;
+}
+.section-title.large::before {
+  right: -50px;
+}
+.section-title.small {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.section-title.small::before {
+  content: ".⋆.･";
+  right: -35px;
+}/*# sourceMappingURL=SectionTitle.css.map */

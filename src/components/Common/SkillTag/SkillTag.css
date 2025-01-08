@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.skill-tag {
+  width: 100%;
+  padding: 3px 8px;
+  font-size: 1.2rem;
+  background-color: #222222;
+  color: #ffffff;
+  border-radius: 5px;
+  letter-spacing: 0;
+  font-weight: 600;
+}/*# sourceMappingURL=SkillTag.css.map */

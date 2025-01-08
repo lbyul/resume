@@ -1,25 +1,37 @@
 @use '../../../styles/base/variables' as *;
 
 .section-title {
-    font-family: $font-title;
     color: $color-lavender;
     position: relative;
     display: inline-block;
-
-    &.large {
-        font-size: 3rem;
-    }
-
-    &.small {
-        font-size: 2rem;
-    }
+    font-weight: $font-bold;
 
     &::before {
         content: '.⋆.･';
         position: absolute;
-        color: $color-yellow;
         bottom: 0;
         right: -50px;
+        font-family: $font-title;
+        color: $color-yellow;
         letter-spacing: 1px;
+        font-weight: $font-regular;
+    }
+
+    &.large {
+        font-size: 3rem;
+
+        &::before {
+            right: -50px;
+        }
+    }
+
+    &.small {
+        font-size: 2rem;
+        margin-bottom: 8px;
+
+        &::before {
+            content: '.⋆.･';
+            right: -35px;
+        }
     }
 }
