@@ -1,0 +1,64 @@
+@use '../../../styles/base/variables' as *;
+
+.content-card {
+    display: flex;
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: 50px;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: $font-bold;
+        }
+
+        &__period {
+            font-size: 1.4rem;
+            margin: 6px 0;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+            color: $color-gray-100;
+        }
+    }
+
+    .card-details {
+        flex: 1;
+    
+        &__item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__description {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -14px;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 5px;
+                background-color: $color-black;
+                border-radius: 50%;
+            }
+        }
+
+        &__skill {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 6px;
+        }
+    }
+}

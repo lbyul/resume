@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.content-card {
+  display: flex;
+}
+.content-card .card-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 50px;
+}
+.content-card .card-list__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.content-card .card-list__period {
+  font-size: 1.4rem;
+  margin: 6px 0;
+}
+.content-card .card-list__subtitle {
+  font-size: 1rem;
+  color: #868686;
+}
+.content-card .card-details {
+  flex: 1;
+}
+.content-card .card-details__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.content-card .card-details__item:last-child {
+  margin-bottom: 0;
+}
+.content-card .card-details__description {
+  position: relative;
+}
+.content-card .card-details__description::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #222222;
+  border-radius: 50%;
+}
+.content-card .card-details__skill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}/*# sourceMappingURL=ContentCard.css.map */
