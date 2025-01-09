@@ -102,6 +102,7 @@ const Profile = () => {
                     <p key={index} className='intro__text'>{text.trim()}</p>
                 ))}
             </section>
+            <Line lineSize='thin' />
         </article>
     );
 }

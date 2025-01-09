@@ -14,9 +14,6 @@
 .profile {
   width: 100%;
 }
-.profile__info {
-  margin-bottom: 60px;
-}
 .profile__category {
   letter-spacing: 0;
   color: #989898;
