@@ -1,0 +1,25 @@
+@use '../../styles/base/variables' as *;
+
+.skill {
+    &__category {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: $font-bold;
+    }
+
+    &__list {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}

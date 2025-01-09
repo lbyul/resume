@@ -1,1 +1,31 @@
-/*# sourceMappingURL=Skill.css.map */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.skill__category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skill__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skill__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.skill__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}/*# sourceMappingURL=Skill.css.map */
