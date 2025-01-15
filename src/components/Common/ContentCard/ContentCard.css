@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: 50px;
 }
 .content-card .card-list__title {
   font-size: 1.8rem;
@@ -30,6 +29,13 @@
 .content-card .card-list__subtitle {
   font-size: 1rem;
   color: #868686;
+  font-weight: 700;
+}
+.content-card .card-list__project-type {
+  font-size: 1rem;
+  color: #C6C6C6;
+  font-weight: 700;
+  margin-top: 6px;
 }
 .content-card .card-details {
   flex: 1;
@@ -37,19 +43,26 @@
 .content-card .card-details__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .content-card .card-details__item:last-child {
   margin-bottom: 0;
 }
 .content-card .card-details__description {
   position: relative;
+  line-height: 1.4;
 }
-.content-card .card-details__description::after {
+.content-card .card-details__description--with-bullet {
+  padding-left: 14px;
+}
+.content-card .card-details__description--with-bullet + .card-details__skill {
+  padding-left: 14px;
+}
+.content-card .card-details__description--with-bullet::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -14px;
+  left: 0;
   transform: translateY(-50%);
   width: 5px;
   height: 5px;

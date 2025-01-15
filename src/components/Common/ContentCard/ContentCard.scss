@@ -2,12 +2,12 @@
 
 .content-card {
     display: flex;
+    white-space: pre-line;
 
     .card-list {
         display: flex;
         flex-direction: column;
         flex: 1;
-        margin-right: 50px;
 
         &__title {
             font-size: 1.8rem;
@@ -20,8 +20,16 @@
         }
 
         &__subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: $color-gray-100;
+            font-weight: $font-bold;
+        }
+
+        &__project-type {
+            font-size: 1.1rem;
+            color: $color-gray-200;
+            font-weight: $font-bold;
+            margin-top: 6px;
         }
     }
 
@@ -31,7 +39,7 @@
         &__item {
             display: flex;
             flex-direction: column;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -40,17 +48,51 @@
 
         &__description {
             position: relative;
+            line-height: 1.4;
+            // white-space: pre-line;
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: -14px;
-                transform: translateY(-50%);
-                width: 5px;
-                height: 5px;
-                background-color: $color-black;
-                border-radius: 50%;
+            &--with-bullet {
+                padding-left: 14px;
+
+                & + .card-details__skill {
+                    padding-left: 14px;
+                }
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0.7rem;
+                    left: 0;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $color-black;
+                    border-radius: 50%;
+                }
+            }
+
+            &[data-indent='double'] {
+                padding-left: 35px;
+
+                &.card-details__description--with-bullet {
+                    &::before {
+                        left: 20px;
+                        background-color: transparent;
+                        border: 1px solid $color-black;
+                    }
+                }
+            }
+        }
+
+        &__href {
+            opacity: 0.7;
+            text-decoration: underline 0.5px $line-gray;
+            text-underline-offset: 3px;
+            transition: all 0.2s ease-in-out;
+            font-weight: $font-semibold;
+
+            &:hover {
+                opacity: 1;
+                text-decoration-color: $color-black;
             }
         }
 
