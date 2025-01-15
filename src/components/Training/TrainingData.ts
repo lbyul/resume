@@ -6,8 +6,8 @@ const trainingContent = ({
 }: {
     highlight?: string[];
     skill?: {
-        subject: string;
-        items: string[];
+        text: string;
+        skill: string[];
     }[];
 }) => {
     const highlightContent = highlight ? highlight.map(highlight => ({
@@ -15,15 +15,11 @@ const trainingContent = ({
         bullet: true
     })) : [];
 
-    const skillContent = skill ? skill.flatMap(({ subject, items }) => [
+    const skillContent = skill ? skill.flatMap(({ text, skill }) => [
         {
-            description: { text: subject },
-            bullet: true
-        },
-        {
-            description: { text: subject },
+            description: { text: text },
             bullet: true,
-            skill: items
+            skill: skill
         }
     ]) : [];
 
@@ -45,12 +41,12 @@ export const trainings: ContentCardProps[] = [
             ],
             skill: [
                 {
-                    subject: '디자인 도구 기술 활용 실습',
-                    items: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe Xd', 'Adobe Premiere Pro', 'Adobe After Effects']
+                    text: '디자인 도구 기술 활용 실습',
+                    skill: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe Xd', 'Adobe Premiere Pro', 'Adobe After Effects']
                 },
                 {
-                    subject: '웹 퍼블리싱 기술 스택 습득',
-                    items: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+                    text: '웹 퍼블리싱 기술 스택 습득',
+                    skill: ['HTML', 'CSS', 'JavaScript', 'jQuery']
                 }
             ]
         })
@@ -66,12 +62,12 @@ export const trainings: ContentCardProps[] = [
             ],
             skill: [
                 {
-                    subject: '개발 도구 및 배포 환경 기초 학습',
-                    items: ['Tailwind CSS', 'Webpack', 'Firebase']
+                    text: '개발 도구 및 배포 환경 기초 학습',
+                    skill: ['Tailwind CSS', 'Webpack', 'Firebase']
                 },
                 {
-                    subject: '프론트엔드 개발 기술 스택 습득',
-                    items: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript']
+                    text: '프론트엔드 개발 기술 스택 습득',
+                    skill: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript']
                 }
             ]
         })
