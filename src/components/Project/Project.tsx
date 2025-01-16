@@ -6,16 +6,16 @@ import { projects } from './ProjectData';
 
 const Project = () => {
     return (
-        <section>
+        <article className='project'>
             <SectionTitle title='Project' />
-            <Line lineSize='thick' />
+            <Line size='thick' />
             {projects.map((project, index) => (
                 <Fragment key={index}>
                     <ContentCard {...project} />
-                    <Line lineSize='thin' />
+                    <Line size='thin' />
                 </Fragment>
             ))}
-        </section>
+        </article>
     );
 }
 

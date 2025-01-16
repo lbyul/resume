@@ -1,5 +1,5 @@
 export interface ContentCardProps {
-    title: string;
+    title?: string;
     period: {
         start: string;
         end: string;
@@ -10,13 +10,18 @@ export interface ContentCardProps {
 }
 
 export interface ContentItem {
-    description: {
+    label?: {
+        primary?: string;
+        emphasis?: string;
+        subtext: string;
+    };
+    description?: {
         strong?: string;
         icon?: string;
         text?: string;
         indent?: 'single' | 'double';
         href?: string;
-    }
+    };
     skill?: string[];
     bullet?: boolean;
 }

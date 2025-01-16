@@ -22,9 +22,9 @@ const skillData: SkillCategory[] = [
 
 const Skill = () => {
     return (
-        <section className='skill'>
+        <article className='skill'>
             <SectionTitle title='Skill' />
-            <Line lineSize='thick' />
+            <Line size='thick' />
             <div className='skill__category'>
                 {skillData.map((category, index) => (
                     <div key={index} className='skill__content'>
@@ -39,8 +39,8 @@ const Skill = () => {
                     </div>
                 ))}
             </div>
-            <Line lineSize='thin' />
-        </section>
+            <Line size='thin' />
+        </article>
     );
 }
 

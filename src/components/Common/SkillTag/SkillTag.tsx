@@ -5,9 +5,7 @@ interface SkillTagProps {
 }
 
 const SkillTag = ({ skillName }: SkillTagProps) => {
-    return (
-        <span className='skill-tag'>{skillName}</span>
-    );
+    return <span className='skill-tag'>{skillName}</span>
 }
 
 export default SkillTag;

@@ -52,7 +52,7 @@ export const trainings: ContentCardProps[] = [
         })
     },
     {
-        title: '이스트소프트 프론트엔드 오르미 1기',
+        title: 'ESTSOFT 프론트엔드 오르미 1기',
         period: { start: '2024.06', end: '2024.10' },
         subtitle: '프론트엔드 과정 수료',
         contents: trainingContent({

@@ -48,8 +48,10 @@ const Profile = () => {
     return (
         <article className='profile'>
             <section className='profile__info'>
-                <p className='profile__category'>Resume</p>
-                <h1 className='profile__title'>김별 | Front-End</h1>
+                <div>
+                    <span className='profile__category'>Resume</span>
+                    <h1 className='profile__title'>김별 | Front-End</h1>
+                </div>
                 <div className='profile__content'>
                     <img src={ProfileImg} alt="프로필 사진" className='profile__img'/>
                     <div className='profile__details'>
@@ -97,12 +99,12 @@ const Profile = () => {
             {/* Introduce Section */}
             <section className='intro'>
                 <SectionTitle title='Introduce' />
-                <Line lineSize='thick' />
+                <Line size='thick' />
                 {profileData.introduction.split('\n').map((text, index) => (
                     <p key={index} className='intro__text'>{text.trim()}</p>
                 ))}
             </section>
-            <Line lineSize='thin' />
+            <Line size='thin' />
         </article>
     );
 }

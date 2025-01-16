@@ -9,7 +9,7 @@ import Certification from './components/Certification/Certification'
 function App() {
 
   return (
-    <div className='resume-container'>
+    <main className='resume'>
       <Profile />
       <Training />
       <Skill />
@@ -17,7 +17,7 @@ function App() {
       <Experience />
       <Education />
       <Certification />
-    </div>
+    </main>
   )
 }
 

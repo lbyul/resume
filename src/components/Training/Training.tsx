@@ -6,16 +6,16 @@ import { trainings } from './TrainingData';
 
 const Training = () => {
     return (
-        <section>
+        <article className='training'>
             <SectionTitle title='Training' />
-            <Line lineSize='thick' />
+            <Line size='thick' />
             {trainings.map((training, index) => (
                 <Fragment key={index}>
                     <ContentCard {...training} />
-                    <Line lineSize='thin' />
+                    <Line size='thin' />
                 </Fragment>
             ))}
-        </section>
+        </article>
     );
 }
 

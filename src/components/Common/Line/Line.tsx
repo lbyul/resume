@@ -1,13 +1,11 @@
 import './Line.scss';
 
 interface LineProps {
-    lineSize?: 'thin' | 'thick'
+    size?: 'thin' | 'thick'
 }
 
-const Line = ({ lineSize = 'thin' }: LineProps) => {
-    return (
-        <div className={`line ${lineSize}`}></div>
-    );
+const Line = ({ size = 'thin' }: LineProps) => {
+    return <hr className={`line-${size}`} />
 }
 
 export default Line;
