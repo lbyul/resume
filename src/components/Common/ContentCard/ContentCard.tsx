@@ -24,31 +24,51 @@ const ContentCard = ({ title, period, subtitle, status, contents }:ContentCardPr
     };
 
     return (
-        <section className='content-card'>
+        <article className='content-card'>
             <div className='card-list'>
                 {title && <h3 className='card-list__title'>{title}</h3>}
-                <span className='card-list__period'>{period.start} ~ {period.end}</span>
-                {subtitle && <span className='card-list__subtitle'>{subtitle}</span>}
-                {status && <span className='card-list__project-type'>{status}</span>}
+                <dl>
+                    <div className='card-list__period'>
+                        <dt className='blind'>기간</dt>
+                        <dd>
+                            {period.start}
+                            {period.end && ` ~ ${period.end}`}
+                        </dd>
+                    </div>
+                    {subtitle && (
+                        <div className='card-list__subtitle'>
+                            <dt className='blind'>구분</dt>
+                            <dd>{subtitle}</dd>
+                        </div>
+                    )}
+                    {status && (
+                        <div className='card-list__status'>
+                            <dt className='blind'>상태</dt>
+                            <dd>{status}</dd>
+                        </div>
+                    )}
+                </dl>
             </div>
+
             <ul className='card-details'>
                 {contents.map((content, index) => (
                     <li key={index} className='card-details__item'>
                         {content.label && (
                             <div className='card-details__label'>
-                                <h3 className='card-details__text'>
+                                <p className='card-details__text'>
                                     {content.label.primary}
                                     {content.label.emphasis && (
                                         <strong>
                                             {content.label.emphasis}
                                         </strong>
                                     )}
-                                </h3>
+                                </p>
                                 <span className='card-details__subtext'>
                                     {content.label.subtext}
                                 </span>
                             </div>
                         )}
+
                         {content.description && (
                             <p
                                 className={`card-details__description ${content.bullet ? 'card-details__description--with-bullet' : ''}`}
@@ -71,7 +91,7 @@ const ContentCard = ({ title, period, subtitle, status, contents }:ContentCardPr
                     </li>
                 ))}
             </ul>
-        </section>
+        </article>
     );
 }
 

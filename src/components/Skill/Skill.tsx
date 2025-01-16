@@ -24,7 +24,6 @@ const Skill = () => {
     return (
         <article className='skill'>
             <SectionTitle title='Skill' />
-            <Line size='thick' />
             <div className='skill__category'>
                 {skillData.map((category, index) => (
                     <div key={index} className='skill__content'>

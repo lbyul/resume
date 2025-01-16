@@ -2,7 +2,6 @@ import { Fragment } from 'react/jsx-runtime';
 import { ContentCardProps, ContentItem } from '../Common/ContentCard/ContentTypes';
 import Line from '../Common/Line/Line';
 import SectionTitle from '../Common/SectionTitle/SectionTitle';
-import './Experience.scss';
 import ContentCard from '../Common/ContentCard/ContentCard';
 
 const experienceContent = ({
@@ -49,7 +48,6 @@ const Experience = () => {
     return (
         <article className='experience'>
             <SectionTitle title='Experience' />
-            <Line size='thick' />
             {experiences.map((experience, index) => (
                 <Fragment key={index}>
                     <ContentCard {...experience} />

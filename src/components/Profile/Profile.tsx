@@ -99,12 +99,13 @@ const Profile = () => {
             {/* Introduce Section */}
             <section className='intro'>
                 <SectionTitle title='Introduce' />
-                <Line size='thick' />
-                {profileData.introduction.split('\n').map((text, index) => (
-                    <p key={index} className='intro__text'>{text.trim()}</p>
-                ))}
+                <div className='intro__text'>
+                    {profileData.introduction.split('\n\n').map((text, index) => (
+                        <p key={index}>{text.trim()}</p>
+                    ))}
+                </div>
+                <Line size='thin' />
             </section>
-            <Line size='thin' />
         </article>
     );
 }

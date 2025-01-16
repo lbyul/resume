@@ -10,13 +10,17 @@ function App() {
 
   return (
     <main className='resume'>
-      <Profile />
-      <Training />
-      <Skill />
-      <Project />
-      <Experience />
-      <Education />
-      <Certification />
+      <article>
+        <Profile />
+        <section>
+          <Training />
+          <Skill />
+          <Project />
+          <Experience />
+          <Education />
+          <Certification />
+        </section>
+      </article>
     </main>
   )
 }
