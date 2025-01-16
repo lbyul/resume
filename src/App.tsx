@@ -10,13 +10,13 @@ function App() {
 
   return (
     <main className='resume'>
-      <article>
+      <article className='resume__container'>
         <Profile />
-        <section>
+        <section className='resume__content'>
           <Training />
           <Skill />
           <Project />
-          <Experience />
+          <Experience /> 
           <Education />
           <Certification />
         </section>

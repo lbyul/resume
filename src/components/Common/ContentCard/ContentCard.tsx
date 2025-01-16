@@ -24,7 +24,9 @@ const ContentCard = ({ title, period, subtitle, status, contents }:ContentCardPr
     };
 
     return (
-        <article className='content-card'>
+        <article
+            className='content-card'
+        >
             <div className='card-list'>
                 {title && <h3 className='card-list__title'>{title}</h3>}
                 <dl>

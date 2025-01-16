@@ -61,11 +61,16 @@ img {
     max-width: 900px;
     margin: 0 auto;
     padding: 80px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
 
+    &__container,
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
     @media (max-width: 768px) {
         padding: 40px;
     }
+
 }
